@@ -60,7 +60,7 @@
 #include "std_msgs/msg/header.hpp"
 
 // Image related
-#include <cv_bridge/cv_bridge.h>
+#include <cv_bridge/cv_bridge.hpp>
 #include <eigen3/Eigen/Dense>
 #include <eigen3/Eigen/Geometry>
 #include <opencv2/opencv.hpp>

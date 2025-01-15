@@ -18,4 +18,4 @@
     queue_size: 1
     tag_detections_topic: "tag_detections"
     tag_detections_image_topic: "tag_detections_image"
-    remove_dupicates: true
+    remove_duplicates: true

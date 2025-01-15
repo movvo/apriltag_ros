@@ -30,7 +30,6 @@
  */
 
 #include "apriltag_ros/continuous_detector.hpp"
-#include <ament_index_cpp/get_package_share_directory.hpp>
 
 
 using namespace apriltag_ros;

@@ -30,7 +30,7 @@
  */
 
 #include "apriltag_ros/common_functions.hpp"
-#include "image_geometry/pinhole_camera_model.h"
+#include "image_geometry/pinhole_camera_model.hpp"
 
 #include "apriltag/common/homography.h"
 #include "apriltag/tagStandard52h13.h"
@@ -279,11 +279,12 @@ apriltag_ros_interfaces::msg::AprilTagDetectionArray TagDetector::detectTags (
     {
         cv::cvtColor(image->image, gray_image, CV_BGR2GRAY);
     }
-    image_u8_t apriltag_image = { .width = gray_image.cols,
-                                    .height = gray_image.rows,
-                                    .stride = gray_image.cols,
-                                    .buf = gray_image.data
-    };
+
+    image_u8_t apriltag_image = {
+        gray_image.cols,    // width
+        gray_image.rows,    // height
+        gray_image.cols,    // stride
+        gray_image.data};   // buf
 
     image_geometry::PinholeCameraModel camera_model;
     camera_model.fromCameraInfo(camera_info);
